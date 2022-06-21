@@ -3,6 +3,7 @@ package mysql
 import (
 	"context"
 	"database/sql"
+
 	"github.com/huzaifamk/Go-Clean-Arch-Project-1/models"
 
 	"github.com/sirupsen/logrus"
@@ -69,7 +70,7 @@ func (m *mysqlBookRepository) GetByID(ctx context.Context, id int64) (res models
 }
 
 func (m *mysqlBookRepository) Store(ctx context.Context, a *models.Book) (err error) {
-	query := `INSERT  books SET id=? , title=? , content=? , author_name=?, created_at=?`
+	query := `INSERT  books SET id=? , title=? , content=? , author_name=? , created_at=?`
 	stmt, err := m.Conn.PrepareContext(ctx, query)
 	if err != nil {
 		return

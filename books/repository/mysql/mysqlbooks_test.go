@@ -21,7 +21,8 @@ func TestGetByID(t *testing.T) {
 	rows := sqlmock.NewRows([]string{"id", "title", "content", "author_name", "created_at"}).
 		AddRow(1, "title 1", "Content 1", "Author 1", time.Now())
 
-	query := "SELECT title, content, author_name, created_at FROM Books WHERE id = \\?"
+	query := `SELECT id, title, content, author_name, created_at
+	FROM books WHERE id = ?`
 
 	mock.ExpectQuery(query).WillReturnRows(rows)
 	a := bookMysqlRepo.NewMysqlBookRepository(db)
@@ -35,7 +36,7 @@ func TestGetByID(t *testing.T) {
 func TestStore(t *testing.T) {
 	now := time.Now()
 	ar := &models.Book{
-		ID:        123,
+		ID:        12,
 		Title:     "Judul",
 		Content:   "Content",
 		Author:    "Iman Tumorang",
@@ -46,7 +47,7 @@ func TestStore(t *testing.T) {
 		t.Fatalf("an error '%s' was not expected when opening a stub database connection", err)
 	}
 
-	query := "INSERT  Book SET id=\\? , title=\\? , content=\\? , author_name=\\?, created_at=\\?"
+	query := "INSERT  books SET id=\\? , title=\\? , content=\\? , author_name=\\? , created_at=\\?"
 	prep := mock.ExpectPrepare(query)
 	prep.ExpectExec().WithArgs(ar.ID, ar.Title, ar.Content, ar.Author, ar.CreatedAt).WillReturnResult(sqlmock.NewResult(12, 1))
 
