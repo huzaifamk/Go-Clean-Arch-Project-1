@@ -32,12 +32,12 @@ func TestGetByID(t *testing.T) {
 	mockService.On("GetByID", mock.Anything, int64(num)).Return(mockBook, nil)
 
 	e := echo.New()
-	req, err := http.NewRequest(echo.GET, "/book/"+strconv.Itoa(num), strings.NewReader(""))
+	req, err := http.NewRequest(echo.GET, "/books/"+strconv.Itoa(num), strings.NewReader(""))
 	assert.NoError(t, err)
 
 	rec := httptest.NewRecorder()
 	c := e.NewContext(req, rec)
-	c.SetPath("book/:id")
+	c.SetPath("books/:id")
 	c.SetParamNames("id")
 	c.SetParamValues(strconv.Itoa(num))
 	handler := bookController.BookHandler{
@@ -69,13 +69,13 @@ func TestStore(t *testing.T) {
 	mockService.On("Store", mock.Anything, mock.AnythingOfType("*models.Book")).Return(nil)
 
 	e := echo.New()
-	req, err := http.NewRequest(echo.POST, "/book", strings.NewReader(string(j)))
+	req, err := http.NewRequest(echo.POST, "/book/add", strings.NewReader(string(j)))
 	assert.NoError(t, err)
 	req.Header.Set(echo.HeaderContentType, echo.MIMEApplicationJSON)
 
 	rec := httptest.NewRecorder()
 	c := e.NewContext(req, rec)
-	c.SetPath("/book")
+	c.SetPath("/book/add")
 
 	handler := bookController.BookHandler{
 		Bookservice: mockService,

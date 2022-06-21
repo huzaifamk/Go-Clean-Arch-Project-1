@@ -19,9 +19,9 @@ func TestGetByID(t *testing.T) {
 	}
 
 	rows := sqlmock.NewRows([]string{"id", "title", "content", "author_name", "created_at"}).
-		AddRow(1, "title 1", "Content 1", 1, time.Now(), time.Now())
+		AddRow(1, "title 1", "Content 1", "Author 1", time.Now())
 
-	query := "SELECT title,content, author_name, created_at FROM Book WHERE id = \\?"
+	query := "SELECT title, content, author_name, created_at FROM Books WHERE id = \\?"
 
 	mock.ExpectQuery(query).WillReturnRows(rows)
 	a := bookMysqlRepo.NewMysqlBookRepository(db)
