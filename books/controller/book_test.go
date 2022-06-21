@@ -20,59 +20,6 @@ import (
 	"github.com/huzaifamk/Go-Clean-Arch-Project-1/models/mocks"
 )
 
-// func TestFetch(t *testing.T) {
-// 	var mockBook models.Book
-// 	err := faker.FakeData(&mockBook)
-// 	assert.NoError(t, err)
-// 	mockService := new(mocks.BookService)
-// 	mockListBook := make([]models.Book, 0)
-// 	mockListBook = append(mockListBook, mockBook)
-// 	num := 1
-// 	cursor := "2"
-// 	mockService.On("Fetch", mock.Anything, cursor, int64(num)).Return(mockListBook, "10", nil)
-
-// 	e := echo.New()
-// 	req, err := http.NewRequest(echo.GET, "/book?id=1&cursor="+cursor, strings.NewReader(""))
-// 	assert.NoError(t, err)
-
-// 	rec := httptest.NewRecorder()
-// 	c := e.NewContext(req, rec)
-// 	handler := bookController.BookHandler{
-// 		Bookservice: mockService,
-// 	}
-// 	err = handler.GetByID(c)
-// 	require.NoError(t, err)
-
-// 	responseCursor := rec.Header().Get("X-Cursor")
-// 	assert.Equal(t, "10", responseCursor)
-// 	assert.Equal(t, http.StatusOK, rec.Code)
-// 	mockService.AssertExpectations(t)
-// }
-
-// func TestFetchError(t *testing.T) {
-// 	mockService := new(mocks.BookService)
-// 	num := 1
-// 	cursor := "2"
-// 	mockService.On("Fetch", mock.Anything, cursor, int64(num)).Return(nil, "", models.ErrInternalServerError)
-
-// 	e := echo.New()
-// 	req, err := http.NewRequest(echo.GET, "/book?id=1&cursor="+cursor, strings.NewReader(""))
-// 	assert.NoError(t, err)
-
-// 	rec := httptest.NewRecorder()
-// 	c := e.NewContext(req, rec)
-// 	handler := bookController.BookHandler{
-// 		Bookservice: mockService,
-// 	}
-// 	err = handler.GetByID(c)
-// 	require.NoError(t, err)
-
-// 	responseCursor := rec.Header().Get("X-Cursor")
-// 	assert.Equal(t, "", responseCursor)
-// 	assert.Equal(t, http.StatusInternalServerError, rec.Code)
-// 	mockService.AssertExpectations(t)
-// }
-
 func TestGetByID(t *testing.T) {
 	var mockBook models.Book
 	err := faker.FakeData(&mockBook)
