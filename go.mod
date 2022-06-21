@@ -3,6 +3,7 @@ module github.com/huzaifamk/Go-Clean-Arch-Project-1
 go 1.18
 
 require (
+	github.com/bxcodec/faker v2.0.1+incompatible
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/labstack/echo v3.3.10+incompatible
 	github.com/sirupsen/logrus v1.8.1
