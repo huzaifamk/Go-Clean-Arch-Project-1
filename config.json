@@ -7,10 +7,10 @@
       "timeout":2
     },
     "database": {
-        "host": "127.0.0.1",
+        "host": "HmkX",
         "port": "3306",
-        "user": "huzaifamk",
-        "pass": "Kittu4798!",
+        "user": "user",
+        "pass": "password",
         "name": "books"
     }
   
