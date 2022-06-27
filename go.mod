@@ -6,9 +6,11 @@ require (
 	github.com/bxcodec/faker v2.0.1+incompatible
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/labstack/echo v3.3.10+incompatible
+	github.com/labstack/gommon v0.3.1
 	github.com/sirupsen/logrus v1.8.1
 	github.com/spf13/viper v1.12.0
 	github.com/stretchr/testify v1.7.1
+	github.com/valyala/fasttemplate v1.2.1
 	gopkg.in/DATA-DOG/go-sqlmock.v1 v1.3.0
 	gopkg.in/go-playground/validator.v9 v9.31.0
 )
@@ -19,7 +21,6 @@ require (
 	github.com/go-playground/locales v0.14.0 // indirect
 	github.com/go-playground/universal-translator v0.18.0 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
-	github.com/labstack/gommon v0.3.1 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
 	github.com/magiconair/properties v1.8.6 // indirect
 	github.com/mattn/go-colorable v0.1.12 // indirect
@@ -35,7 +36,6 @@ require (
 	github.com/stretchr/objx v0.1.0 // indirect
 	github.com/subosito/gotenv v1.3.0 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
-	github.com/valyala/fasttemplate v1.2.1 // indirect
 	golang.org/x/crypto v0.0.0-20220411220226-7b82a4e95df4 // indirect
 	golang.org/x/net v0.0.0-20220520000938-2e3eb7b945c2 // indirect
 	golang.org/x/sys v0.0.0-20220520151302-bc2c85ada10a // indirect

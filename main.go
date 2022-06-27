@@ -12,6 +12,7 @@ import (
 	"github.com/spf13/viper"
 
 	_bookHandler "github.com/huzaifamk/Go-Clean-Arch-Project-1/books/controller"
+	_bookHandlerMiddleware "github.com/huzaifamk/Go-Clean-Arch-Project-1/books/controller/middleware"
 	_bookRepo "github.com/huzaifamk/Go-Clean-Arch-Project-1/books/repository/mysql"
 	_bookService "github.com/huzaifamk/Go-Clean-Arch-Project-1/books/service"
 )
@@ -59,6 +60,9 @@ func main() {
 	}()
 
 	e := echo.New()
+	middL := _bookHandlerMiddleware.InitMiddleware()
+	e.Use(middL.Logger())
+	e.Use(middL.CORS)
 	br := _bookRepo.NewMysqlBookRepository(dbConn)
 
 	timeoutContext := time.Duration(viper.GetInt("context.timeout")) * time.Second
