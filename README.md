@@ -1,10 +1,29 @@
-# Go-Clean-Arch-Project-1
-My first Golang Backend micro-service following Go Clean Architecture rules with clean code.
+**Golang Clean Architecture Sample Project**
 
-    👋 Hi, I’m @HuzaifaMk
-    👀 I’m interested in Frontend & Backend Development...
-    🌱 I’m currently learning JavaScript & it's libraries...
-    💞️ I’m looking to collaborate on Golang...
-    📱 I'm also learning App Development with Flutter...
-    👨🏻‍💻 I'm looking forward to contribute in different projects...
-    🥷🏻 I'm good at Golang | Javascript | HTML | CSS | Flutter | React Native...
+Here's my sample project, this is one of the sample projects that I made following Clean Architecture rules (similar to gPRC), written in Golang, integrated with MySQL database, consisting of 2 APIs currently and with unit tests.
+
+Tech Stacks used:
+
+- Golang
+- Echo Framework
+- Proxy Middlewares
+- Loggers
+- MySQL
+
+About Me:
+
+    🔭 I’m currently working as a Go Backend Developer 🔴
+
+    💠 I have 1.5+ years of experience in programming! 🟣
+
+    ⚙️ I’m currently learning Rust, Elixir & Ruby 🟠
+
+    👯 I’m looking to collaborate on Golang Open-Source Projects! 🟡
+
+    🎯 2022 Goals: Rust | Blockchain | Web3 🟤
+
+    👨‍💻 All of my projects are available at my GitHub: github.com/huzaifamk 🟢
+
+    ⚡ Fun fact about me: I keep learning! 🔘
+
+    💬 Ask me about Backend Architecture | RESTful API | Clean Architecture | Micro-Services 🔵
