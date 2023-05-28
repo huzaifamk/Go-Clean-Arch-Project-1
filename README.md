@@ -65,12 +65,20 @@ This project is still in development, and I will add more features in the future
 
 #### Response
 
+```json
     HTTP/1.1 201 Created
     Date: Sun, 20 Jun 2021 15:00:00 GMT
     Content-Type: application/json
     Content-Length: 2
 
-    []
+    [
+        {
+            "id": 1,
+            "title": "Book Title",
+            "author": "Book Author"
+        }
+    ]
+```
 
 ### Update a Book
 
@@ -82,12 +90,20 @@ This project is still in development, and I will add more features in the future
 
 #### Response
 
+```json
     HTTP/1.1 200 OK
     Date: Sun, 20 Jun 2021 15:00:00 GMT
     Content-Type: application/json
     Content-Length: 2
 
-    []
+    [
+        {
+            "id": 1,
+            "title": "Book Title",
+            "author": "Book Author"
+        }
+    ]
+```
 
 ### Delete a Book
 
@@ -99,9 +115,10 @@ This project is still in development, and I will add more features in the future
 
 #### Response
 
+```json
     HTTP/1.1 204 No Content
     Date: Sun, 20 Jun 2021 15:00:00 GMT
-
+```
 
 ## License
 
